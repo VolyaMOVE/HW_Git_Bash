@@ -1,0 +1,465 @@
+JSON
+ --4. Создать внешний репозиторий c названием JSON.
+
+ --5. Клонировать репозиторий JSON на локальный компьютер.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json
+$ git clone git@github.com:VolyaMOVE/JSON.git
+Cloning into 'JSON'...
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+warning: You appear to have cloned an empty repository.
+
+ --6. Внутри локального JSON создать файл “new.json”.
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ cat > new.json
+
+
+ --7. Добавить файл под гит.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git add new.json
+warning: in the working copy of 'new.json', LF will be replaced by CRLF the next time Git touches it
+
+ --8. Закоммитить файл.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git commit -m "add new.json"
+[main (root-commit) 2895752] add new.json
+ 1 file changed, 6 insertions(+)
+ create mode 100644 new.json
+
+ --9. Отправить файл на внешний GitHub репозиторий.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git push
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 256 bytes | 256.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:VolyaMOVE/JSON.git
+ * [new branch]      main -> main
+
+ --10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ cat new.json
+{"person_name": "olga",
+"person_patronymic": "vladzimirovna",
+"person_surname": "malashkina",
+"person_age": 35,
+"person_cat": 1,
+"person_salary": 2000}
+
+
+-- 11. Отправить изменения на внешний репозиторий.
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git add new.json
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git commit -am "modify new.json"
+warning: in the working copy of 'new.json', LF will be replaced by CRLF the next time Git touches it
+[main 186e26a] modify new.json
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git push
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 658 bytes | 658.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:VolyaMOVE/JSON.git
+   2895752..186e26a  main -> main
+
+
+ --12. Создать файл preferences.json
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ cat > preferences.json
+
+
+ --13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ cat > preferences.json
+{"favorit_movie":"Harry_Poter",
+"favorit_serial":"Game_of_thrones",
+"favorit_food":"pizza_tuna",
+"favorit_country":"Cyprus"}
+
+
+ --14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ cat > skils.json
+{"skill":"bug_report",
+"skill":"Postman",
+"skill":"SQL",
+"skill":"Git_Hub",
+"skill":"Devtools",
+"skill":"mobile_testing"}
+
+
+ --15. Отправить сразу 2 файла на внешний репозиторий.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        preferences.json
+        skils.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git add preferences.json skils.json
+warning: in the working copy of 'preferences.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'skils.json', LF will be replaced by CRLF the next time Git touches it
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git commit -m "add preferences.json skils.json"
+[main 22bda20] add preferences.json skils.json
+ 2 files changed, 10 insertions(+)
+ create mode 100644 preferences.json
+ create mode 100644 skils.json
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git push
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 529 bytes | 529.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:VolyaMOVE/JSON.git
+   186e26a..22bda20  main -> main
+
+ --16. На веб интерфейсе создать файл bug_report.json.
+
+ --17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ --18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+ --19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ --20. Синхронизировать внешний и локальный репозиторий JSON
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git pull
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+Updating 22bda20..f970cdc
+Fast-forward
+ bug_report.json  | 5 +++++
+ preferences.json | 2 +-
+ skils.json       | 2 +-
+ 3 files changed, 7 insertions(+), 2 deletions(-)
+ create mode 100644 bug_report.json
+
+
+XML
+ --21. Создать внешний репозиторий c названием XML.
+
+ --22. Клонировать репозиторий XML на локальный компьютер.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git clone git@github.com:VolyaMOVE/XML.git
+Cloning into 'XML'...
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+warning: You appear to have cloned an empty repository.
+
+ --23. Внутри локального XML создать файл “new.xml”.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ cat > new.xml
+
+ --24. Добавить файл под гит.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git add new.xml
+
+ --25. Закоммитить файл.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git commit -m "add new.xml"
+[main 4926d13] add new.xml
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.xml
+
+ --26. Отправить файл на внешний GitHub репозиторий.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ git push
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 269 bytes | 269.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:VolyaMOVE/JSON.git
+   f970cdc..4926d13  main -> main
+
+ --27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON (main)
+$ cat > new.xml
+<surname>malashkina</surname>
+<name>olya</name>
+<patronymic>vladzimirovna</patronymic>
+<age>35</age>
+<pets>1</pets>
+<salary>2000</salary>
+
+ --28. Отправить изменения на внешний репозиторий.
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON/XML (main)
+$ git push
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:VolyaMOVE/XML.git
+ * [new branch]      main -> main
+
+ --29. Создать файл preferences.xml
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON/XML (main)
+$ touch preferences.xml
+
+ --30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON/XML (main)
+$ cat > preferences.xml
+<favorit_film>Harry Potter</favorit_film>
+<favorit_serial>Game of Throns</favorit_serial>
+<favorit_food>pizza Tuna</favorit_food>
+<favorit_season>summer</favorit_season>
+<country>Cyprus</country>
+
+ --31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON/XML (main)
+$ cat skills.xml
+<skill>bug report</skill>
+<skill>Postman</skill>
+<skill>SQL</skill>
+<skill>Git Hub</skill>
+<skill>Devtools</skill>
+
+
+
+ --32. Сделать коммит в одну строку.
+lAlexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON/XML (main)
+$ git add  preferences.xml  skills.xml
+warning: in the working copy of 'preferences.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'skills.xml', LF will be replaced by CRLF the next time Git touches it
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON/XML (main)
+$ git commit -m "add preferences.xml skills.xml"
+[main 3c28930] add preferences.xml skills.xml
+ 2 files changed, 10 insertions(+)
+ create mode 100644 preferences.xml
+ create mode 100644 skills.xml
+
+
+
+ --33. Отправить сразу 2 файла на внешний репозиторий.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON/XML (main)
+$ git push
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 500 bytes | 500.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:VolyaMOVE/XML.git
+   bd6110a..3c28930  main -> main
+
+ --34. На веб интерфейсе создать файл bug_report.xml.
+
+ --35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ --36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+
+<environment>Windows 11</environment>
+<title>Not all homepage elements are translated into Japanese</title>
+ <steps>1) Click_on_the_language_selection_dropdown_in_the_upper_right_corner 2) Switch_language_to_Japanese 3) Scroll_the_page_down_to_the_end</steps>
+ <expected_result>All elements of the main page are translated into Japanese</expected_result>
+ <actual_result>Not all homepage elements are translated into Japanese</actual_result>
+
+ --37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ --38. Синхронизировать внешний и локальный репозиторий XML
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/json/JSON/XML (main)
+$ git pull
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.52 KiB | 5.00 KiB/s, done.
+From github.com:VolyaMOVE/XML
+   3c28930..8b33494  main       -> origin/main
+Updating 3c28930..8b33494
+Fast-forward
+ bug_report.xml | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 bug_report.xml
+
+
+TXT
+ 1. Создать внешний репозиторий c названием TXT.
+
+ 2. Клонировать репозиторий TXT на локальный компьютер.
+
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo
+$ git clone git@github.com:VolyaMOVE/TXT.git
+Cloning into 'TXT'...
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+warning: You appear to have cloned an empty repository.
+
+ 3. Внутри локального TXT создать файл “new.txt”.
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ touch new.txt
+
+ 4. Добавить файл под гит.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ git add new.txt
+
+
+ 5. Закоммитить файл.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ git commit -m "add new.txt"
+[main (root-commit) a8dc52a] add new.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ git push
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 214 bytes | 214.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:VolyaMOVE/TXT.git
+ * [new branch]      main -> main
+
+
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ cat > new.txt
+Фамилия-Малашкина
+Имя-Ольга
+Отчество- Владимировна
+Возраст- 35
+Количество домашних животных - 1
+будущая желаемая зарплата - 2000
+
+
+ 8. Отправить изменения на внешний репозиторий.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ git add new.txt
+warning: in the working copy of 'new.txt', LF will be replaced by CRLF the next time Git touches it
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ git commit -am "modify new.txt"
+[main b88779b] modify new.txt
+ 1 file changed, 6 insertions(+)
+
+
+ 9. Создать файл preferences.txt
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ touch preferences.txt
+
+
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ cat > preferences.txt
+Любимый фильм- Гари Поттер
+Любимый сериал- Игра престолов
+Любимая еда- пицца с тунцом
+Любимая пора года- лето
+Страна которую хочу посетить- Кипр
+
+
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ cat > skills.txt
+чек-листы, баг-репорты, SQL, Postman, Git Hub, Git Bash, mobile testing, теория тестирования
+
+ 12. Сделать коммит в одну строку.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ git commit -m "add preferences.txt skills.txt"
+[main 68653b4] add preferences.txt skills.txt
+ 2 files changed, 6 insertions(+)
+ create mode 100644 preferences.txt
+ create mode 100644 skills.txt
+
+
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ git push
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 622 bytes | 622.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:VolyaMOVE/TXT.git
+   b88779b..68653b4  main -> main
+
+
+ 14. На веб интерфейсе создать файл bug_report.txt.
+
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+
+environment - Windows 11
+title - Not all homepage elements are translated into Japanese
+steps - 1) Click on the language selection dropdown in the upper right corner 2) Switch language to Japanese 3) Scroll the page down to the end
+expected result - All elements of the main page are translated into Japanese
+actual result - Not all homepage elements are translated into Japanese
+
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 18. Синхронизировать внешний и локальный репозиторий TXT
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/gitrepo/TXT (main)
+$ git pull
+Enter passphrase for key '/c/Users/Alexsey/.ssh/id_ed25519':
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 2.09 KiB | 5.00 KiB/s, done.
+From github.com:VolyaMOVE/TXT
+   68653b4..e7fc32f  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+        preferences.txt
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 68653b4..e7fc32f
+
