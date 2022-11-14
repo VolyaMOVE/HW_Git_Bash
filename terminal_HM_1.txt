@@ -1,0 +1,146 @@
+Первая часть первого  ДЗ  ))
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31
+$ pwd
+/d/group_31
+
+
+2) Создать папку
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31
+$ mkdir qa
+
+
+3) Зайти в папку
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31
+$ ls -la
+total 8
+drwxr-xr-x 1 Alexsey 197121 0 Nov  9 15:00 ./
+drwxr-xr-x 1 Alexsey 197121 0 Nov  9 13:10 ../
+drwxr-xr-x 1 Alexsey 197121 0 Nov  9 13:25 dir_3/
+drwxr-xr-x 1 Alexsey 197121 0 Nov  9 15:00 qa/
+
+
+
+4) Создать 3 папки
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa
+$ mkdir qa_1 qa_2 qa_3
+
+
+5) Зайти в любоую папку
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa
+$ cd qa_1
+
+
+6) Создать 5 файлов (3 txt, 2 json)
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1
+$ touch thework1.txt thework2.txt thework3.txt
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1
+$ touch name.json
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1
+$ touch name2.json name3.json
+
+
+7) Создать 3 папки
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1
+$ mkdir hm_1 hm_2 hm_3
+
+
+8. Вывести список содержимого папки
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1
+$ ls -la
+total 4
+drwxr-xr-x 1 Alexsey 197121 0 Nov  9 16:11 ./
+drwxr-xr-x 1 Alexsey 197121 0 Nov  9 15:17 ../
+drwxr-xr-x 1 Alexsey 197121 0 Nov  9 16:11 hm_1/
+drwxr-xr-x 1 Alexsey 197121 0 Nov  9 16:11 hm_2/
+drwxr-xr-x 1 Alexsey 197121 0 Nov  9 16:11 hm_3/
+-rw-r--r-- 1 Alexsey 197121 0 Nov  9 15:43 name.json
+-rw-r--r-- 1 Alexsey 197121 0 Nov  9 15:44 name2.json
+-rw-r--r-- 1 Alexsey 197121 0 Nov  9 15:40 thework1.txt
+-rw-r--r-- 1 Alexsey 197121 0 Nov  9 15:40 thework2.txt
+-rw-r--r-- 1 Alexsey 197121 0 Nov  9 15:40 thework3.txt
+
+
+9) + Открыть любой txt файл
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1
+$ cat thework1.txt
+
+
+10) + написать туда что-нибудь, любой текст.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1
+$ cat >> thework1.txt
+1) manual
+2)automation
+
+11) + сохранить и выйти.
+
+
+12) Выйти из папки на уровень выше
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1/hm_2
+$ mv d:/group_31/qa/qa_1/name.json d:/group_31/qa/qa_1/hm_3
+
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1/hm_2
+$ cp d:/group_31/qa/qa_1/name2.json d:/group_31/qa/qa_1/hm_1
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1/hm_2
+$ cp d:/group_31/qa/qa_1/thework1.txt d:/group_31/qa/qa_1/hm_1
+
+
+15) Найти файл по имени
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1/hm_3
+$ find . -name "name.json"
+./name.json
+
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1/hm_3
+$ tail -f d:/group_31/qa/qa_1/thework1.txt
+1) manual
+2)automation
+1)manual
+2)automation
+3)qa
+
+17) вывести несколько первых строк из текстового файла
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1/hm_3
+$ head -2 d:/group_31/qa/qa_1/thework1.txt
+1) manual
+2)automation
+
+
+18) вывести несколько последних строк из текстового файла
+
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1/hm_3
+$ tail -2 d:/group_31/qa/qa_1/thework1.txt
+2)automation
+3)qa
+
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+20) вывести дату и время
+Alexsey@DESKTOP-C5GGP3M MINGW64 /d/group_31/qa/qa_1/hm_3
+$ date
+Thu Nov 10 11:29:09     2022
+
